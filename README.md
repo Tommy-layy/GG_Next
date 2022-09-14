@@ -45,8 +45,6 @@ A website app where users are able to browse for games that are free to play. Us
 - `Fork` & `Clone` this repository.
 - `npm i` to install necessary dependencies.
 
-#### Dependencies include React, react-dom, react-router-dom, dotenv, axios, and sweetalert. These should already be in the package.json files.
-
 #### This repo is only the frontend portion of GGNext. The backend portion is availabla via the link provided above.
 
 ---
