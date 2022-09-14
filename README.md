@@ -37,7 +37,7 @@ A website app where users are able to browse for games that are free to play. Us
 
 ### **_Screenshots_**
 
-<img alt="Snapshot" width='500' src="" />
+<img alt="Snapshot" width='500' src="https://cdn.discordapp.com/attachments/1005741137316827230/1019578608915861565/Screen_Shot_2022-09-14_at_7.00.03_AM.png" />
 
 ---
 ### **_Getting Started_**
@@ -51,12 +51,16 @@ A website app where users are able to browse for games that are free to play. Us
 
 ### **_Future Updates_**
 
-- [x] ~~Create Repo For Backend~~
-- [ ] Another Future Update
+- [ ] Get API to render games onto the page
+- [ ] Allow users to be able to change/update their account information
+- [ ] Allow users to be able to add games to a list
+- [ ] Adjust Nav Bar
+- [ ] Fix lightened texts on sign in/register form
 
 ---
 
 ### **_Credits_**
 
+* [Images](https://wallpapercave.com/games-collage-wallpapers)
 * [Rapid API](https://rapidapi.com/?site)
 * Deployed with [heroku](https://www.heroku.com/)
