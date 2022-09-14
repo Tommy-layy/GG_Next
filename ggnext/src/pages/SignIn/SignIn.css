@@ -8,6 +8,7 @@
   color: white;
   background-color: rgb(75, 75, 75);
   padding: 40px;
+  border: 5px solid #151515;
 }
 
 #signInButton,

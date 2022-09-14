@@ -6,9 +6,8 @@ import './Home.css'
 const Home = () => {
   return (
     <div className="page home">
-      <h1>GGNext</h1>
-      <h2>Free-To-Play Games</h2>
-      {/* <GameCard games={games} /> */}
+      <h1></h1>
+      <h2></h2>
     </div>
   )
 }

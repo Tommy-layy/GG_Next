@@ -6,8 +6,9 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(75, 75, 75);
   padding: 40px;
+  border: 5px solid #151515;
 }
 
 #registerButton,
