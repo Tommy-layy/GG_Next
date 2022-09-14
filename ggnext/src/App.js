@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav/Nav'
+import axios from 'axios'
 import SignIn from './pages/SignIn/SignIn'
 import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'

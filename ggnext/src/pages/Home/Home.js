@@ -5,9 +5,11 @@ import './Home.css'
 
 const Home = () => {
   return (
-    <section className="page home">
+    <div className="page home">
       <h1>GGNext</h1>
-    </section>
+      <h2>Free-To-Play Games</h2>
+      {/* <GameCard games={games} /> */}
+    </div>
   )
 }
 

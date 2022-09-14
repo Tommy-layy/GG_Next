@@ -6,9 +6,8 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  background-color: grey;
+  background-color: rgb(75, 75, 75);
   padding: 40px;
-  
 }
 
 #signInButton,

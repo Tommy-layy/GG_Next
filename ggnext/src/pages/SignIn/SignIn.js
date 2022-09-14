@@ -17,7 +17,7 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
     setFormValues({ email: '', password: '' })
     setUser(payload)
     toggleAuthenticated(true)
-    navigate('/')
+    navigate('/profile')
   }
 
   return (
@@ -31,7 +31,7 @@ const SignIn = ({ setUser, toggleAuthenticated }) => {
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="example@example.com"
+              placeholder=""
               value={formValues.email}
               id="signInValues"
               required

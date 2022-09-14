@@ -40,7 +40,7 @@ const SignUp = () => {
       <div className="card-overlay centered">
         <form className="signUpForm" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <h3 id="signUpTitle">Sign Up</h3>
+            <h3 id="signUpTitle">Register</h3>
             <label htmlFor="name">Name</label>
             <input
               onChange={handleChange}
