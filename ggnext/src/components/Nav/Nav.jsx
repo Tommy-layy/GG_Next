@@ -33,6 +33,9 @@ const Nav = ( { user, authenticated, handleLogOut}) => {
         <Link to="/">Home</Link>
         </a>
         <a>
+        <Link to='games'>Search</Link>
+        </a>
+        <a>
         <Link to='/profile'>Profile</Link>
         </a>
         <a>

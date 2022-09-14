@@ -27,3 +27,12 @@ export const CheckSession = async () => {
     throw error
   }
 }
+
+export const CheckLogin = async () => {
+  try {
+    const res = await Client.get('/api/user/loggedin')
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}

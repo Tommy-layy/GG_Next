@@ -1,0 +1,17 @@
+.editAccountButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
+}
+
+.editAccountButton:hover {
+  text-decoration: none;
+  background-color: rgb(201, 138, 216);
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
+}

@@ -1,12 +1,60 @@
-.profilepage {
-  background-color: #222222;
-  background: #000000 url("https://wallpapercave.com/dwp2x/wp10523085.jpg") no-repeat scroll 50% 50%;
-  height: 95vh;
-  padding-top: 2vh;
+.buttonz:hover {
+  text-decoration: none;
+  background-color: rgb(150, 150, 150);
 }
 
-.home > h1 {
-  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 2px 2px 2px rgba(255,255,255,0);
-  color: rgb(0, 0, 0);
-  font-size: 35px;
+.buttonz {
+  font-size: 17px;
+  margin-top: 11px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttonZ:hover {
+  text-decoration: none;
+  background-color: rgb(95, 95, 95);
+}
+
+.buttonZ {
+  font-size: 17px;
+  margin-top: 11px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.favoriteCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite {
+  display: flex;
+  width: 70vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  border: 2px black solid;
+  color: black;
+}
+
+.editAccountButton {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.editAccountButton:hover {
+  text-decoration: none;
+  background-color: rgb(95, 95, 95);
+  font-weight: bold;
 }
