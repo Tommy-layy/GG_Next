@@ -1,0 +1,9 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vh;
+  height: 4vmin;
+  background: #2A2A2A;
+  border: 4px ridge #ABABAB;
+  border-radius: 4px 4px 4px 4px;
+}
