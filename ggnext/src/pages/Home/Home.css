@@ -1,0 +1,10 @@
+.page {
+  background-color: #b3b3b3;
+  height: 88vh;
+  padding-top: 2vh;
+}
+
+.home > h1 {
+  color: white;
+  font-size: 35px;
+}

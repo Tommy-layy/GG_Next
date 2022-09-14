@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { RegisterUser } from '../../services/Auth'
 import { useNavigate } from 'react-router-dom'
-import './signup.css'
+import './Register.css'
 
 const SignUp = () => {
   let navigate = useNavigate()
@@ -46,7 +46,7 @@ const SignUp = () => {
               onChange={handleChange}
               name="name"
               type="text"
-              placeholder="John Smith"
+              placeholder=""
               value={formValues.name}
               id="signUpValues"
               required
@@ -58,7 +58,7 @@ const SignUp = () => {
               onChange={handleChange}
               name="email"
               type="text"
-              placeholder="example@example.com"
+              placeholder=""
               value={formValues.email}
               id="signUpValues"
               required
