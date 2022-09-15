@@ -3,7 +3,7 @@ import axios from 'axios'
 import GameCard from '../../components/GameCard/GameCard'
 import './Home.css'
 
-const Home = () => {
+const Home = ({ games, setGames }) => {
   return (
     <div className="page home">
       <h1></h1>

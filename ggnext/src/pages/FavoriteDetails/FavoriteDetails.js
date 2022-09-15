@@ -51,7 +51,7 @@ const FavoriteDetails = ({
         ) : null}
         {updateFavorite ? (
           <button className="buttonz" onClick={updateFavorite}>
-            Update Playlist
+            Update List
           </button>
         ) : null}
         <button

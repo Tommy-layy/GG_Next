@@ -22,6 +22,7 @@ function App() {
   const [userFavoriteGame, setUserFavoriteGame] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [games, setGames] = useState([])
 
   let navigate = useNavigate()
 
