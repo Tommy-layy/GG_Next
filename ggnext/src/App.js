@@ -6,8 +6,8 @@ import SignIn from './pages/SignIn/SignIn'
 import Register from './pages/Register/Register'
 import Home from './pages/Home/Home'
 import Profile from './pages/Profile/Profile'
-import FavoritesCard from './components/FavoritesCard/FavoritesCard'
-import FavoriteGameCard from './components/FavoriteGameCard/FavoriteGameCard'
+import GameSearch from './pages/GameSearch/GameSearch'
+import GameDetails from './pages/GameDetails/GameDetails'
 import FavoriteDetails from './pages/FavoriteDetails/FavoriteDetails'
 import FavoriteGameDetails from './pages/FavoriteGameDetails/FavoriteGameDetails'
 import Client, { BASE_URL } from './services/api'
@@ -18,7 +18,7 @@ function App() {
   const [gameSearchFilters, setGameSearchFilters] = useState({})
   const [selectedGame, setSelectedGame] = useState(null)
   const [selectedFavorite, setSelectedFavorite] = useState(null)
-  const [userFavorite, setUserFavorites] = useState(null)
+  const [userFavorites, setUserFavorites] = useState(null)
   const [userFavoriteGame, setUserFavoriteGame] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -43,7 +43,7 @@ function App() {
 
   const handleUserFavorites = async (user) => {
     let user_id = user.id
-    let favorites = await Client.get(`${BASE_URL}/api/favorite/${user_id}`)
+    let favorites = await Client.get(`${BASE_URL}/favorite/${user_id}`)
     setUserFavorites(favorites.data)
   }
 
@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav authenticated={authenticated} user={user} LogOut={LogOut} />
+      <Nav LogOut={LogOut} user={user} authenticated={authenticated} />
       <main>
         <Routes>
           <Route
@@ -99,26 +99,52 @@ function App() {
             }
           />
           <Route
-            path="/login"
+            path="/games"
             element={
-              <SignIn
-                setUser={setUser}
-                toggleAuthenticated={toggleAuthenticated}
+              <GameSearch
+                setGameSearchFilters={setGameSearchFilters}
+                gameSearchFilters={gameSearchFilters}
+                handleGameSelect={handleGameSelect}
+                setSelectedFavorite={setSelectedFavorite}
               />
             }
           />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="/games/:game_id"
+            element={
+              <GameDetails
+                selectedGame={selectedGame}
+                setSelectedGame={setSelectedGame}
+                handleGoToSearch={handleGoToSearch}
+                user={user}
+                authenticated={authenticated}
+                userFavorites={userFavorites}
+                selectedFavorite={selectedFavorite}
+                setSelectedFavorite={setSelectedFavorite}
+              />
+            }
+          />
           <Route
             path="/profile"
             element={
               <Profile
                 user={user}
                 authenticated={authenticated}
-                userFavorite={userFavorite}
+                userFavorite={userFavorites}
                 handleFavoriteSelect={handleFavoriteSelect}
                 handleUserFavorites={handleUserFavorites}
                 setSelectedFavorite={setSelectedFavorite}
                 LogOut={LogOut}
+              />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/login"
+            element={
+              <SignIn
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
               />
             }
           />
@@ -148,7 +174,6 @@ function App() {
             }
           />
         </Routes>
-        <Nav />
       </main>
     </div>
   )

@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: rgb(75, 75, 75);
   padding: 40px;
   border: 5px solid #151515;

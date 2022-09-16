@@ -19,7 +19,7 @@ const FavoriteGameDetails = ({
   const handleRemoveFromFavorite = async (favorite_id) => {
     let game_id = userFavoriteGame.id
     let response = await Client.delete(
-      `${BASE_URL}/api/favorite/addgame/${favorite_id}/${game_id}`
+      `${BASE_URL}/favorite/addgame/${favorite_id}/${game_id}`
     )
     swal(response.data.message, 'Click OK to return!', 'warning')
     navigate(`/profile`)

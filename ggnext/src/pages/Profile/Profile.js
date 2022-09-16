@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import FavoritesCard from '../../components/FavoritesCard/FavoritesCard'
+import FavoriteCard from '../../components/FavoriteCard/FavoriteCard'
 import UserSettings from '../../components/UserSettings/UserSettings'
 import Client, { BASE_URL } from '../../services/api'
 import './Profile.css'
@@ -19,6 +19,7 @@ const Profile = ({
   const [newFavoriteTitle, setNewFavoriteTitle] = useState(null)
   const navigate = useNavigate()
 
+  console.log(userFavorite)
   const toggleActive = (e) => {
     setIsFormActive(!isFormActive)
     if (e.target.innerHTML === 'Edit Account') {
@@ -31,8 +32,11 @@ const Profile = ({
     toggleCreateNew(!createNew)
   }
   const submitNewFavorite = async () => {
-    await Client.post(`${BASE_URL}/api/favorite/${user.id}`, {
-      title: newFavoriteTitle
+    await Client.post(`${BASE_URL}/favorite/${user.id}`, {
+      title: newFavoriteTitle,
+      image: 'test',
+      createdAt: new Date(),
+      updatedAt: new Date()
     })
     toggleCreateNew(false)
     navigate('/profile')
@@ -59,7 +63,7 @@ const Profile = ({
             id="createF"
             onClick={handleCreateFavorite}
           >
-            {createNew ? 'Cancel' : 'Create Favorite'}
+            {createNew ? 'Cancel' : 'Create A List'}
           </button>
           {createNew ? (
             <input
@@ -70,19 +74,23 @@ const Profile = ({
           ) : null}
           {createNew ? (
             <button className="buttonz" onClick={submitNewFavorite}>
-              Add List
+              Create List
             </button>
           ) : null}
         </div>
       </section>
       <div id="userFavorite">
+        <h1>Test</h1>
         <div className="favoriteCard">
           {userFavorite?.map((userFavorite, index) => (
-            <FavoritesCard
-              key={userFavorite.id}
-              userFavorite={userFavorite}
-              handleFavoriteSelect={() => handleFavoriteSelect(userFavorite)}
-            />
+            <div>
+              <FavoriteCard
+                key={userFavorite.id}
+                userFavorite={userFavorite}
+                handleFavoriteSelect={() => handleFavoriteSelect(userFavorite)}
+              />
+              <h1>Test2</h1>
+            </div>
           ))}
         </div>
       </div>

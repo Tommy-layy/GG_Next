@@ -2,6 +2,7 @@ import FavoriteGameCard from '../../components/FavoriteGameCard/FavoriteGameCard
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../../services/api'
 import { useState } from 'react'
+import './FavoriteDetails.css'
 
 const FavoriteDetails = ({
   selectedFavorite,
@@ -23,7 +24,7 @@ const FavoriteDetails = ({
   }
   const updateFavorite = async () => {
     const res = await Client.put(
-      `${BASE_URL}/api/playlist/${selectedFavorite.id}`,
+      `${BASE_URL}/favorite/${selectedFavorite.id}`,
       { title: newFavoriteTitle }
     )
     toggleUpdateF(false)
@@ -32,7 +33,7 @@ const FavoriteDetails = ({
 
   const deleteFavorite = async () => {
     const res = await Client.delete(
-      `${BASE_URL}/api/playlist/${selectedFavorite.id}`
+      `${BASE_URL}/favorite/${selectedFavorite.id}`
     )
     setSelectedFavorite(null)
     navigate('/profile')
@@ -71,7 +72,7 @@ const FavoriteDetails = ({
         ))}
       </div>
       <button className="buttonz" onClick={handleReturn}>
-        Return to list
+        Return to lists
       </button>
     </div>
   )

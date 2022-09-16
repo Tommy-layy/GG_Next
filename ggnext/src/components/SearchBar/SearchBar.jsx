@@ -1,4 +1,4 @@
-import '.SearchBar.css'
+// import '.SearchBar.css'
 
 const SearchBar = ({
   search,
@@ -16,11 +16,9 @@ const SearchBar = ({
   }
 
   return (
-    <div className="searchCard">
-      <p className="searchHeader">SEARCH</p>
+    <div>
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
-          <label htmlFor="search">SEARCH: </label>
           <input
             className="searchField"
             id="search"

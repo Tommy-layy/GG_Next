@@ -1,5 +1,6 @@
-const FavoritesCard = ({ userFavorite, handleFavoriteSelect }) => {
+const FavoriteCard = ({ userFavorite, handleFavoriteSelect }) => {
   
+  console.log('test')
   return (
     <div className="favorite">
       <h2 className="favoriteName"> {userFavorite.title} </h2>
@@ -10,4 +11,4 @@ const FavoritesCard = ({ userFavorite, handleFavoriteSelect }) => {
   )
 }
 
-export default FavoritesCard
+export default FavoriteCard

@@ -1,0 +1,29 @@
+#userFavorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.favoriteCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite {
+  display: flex;
+  width: 70vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  border: 2px black solid;
+  color: black;
+}
+
+.favoriteName {
+  background-color: white;
+}
