@@ -4,6 +4,7 @@
 }
 
 .buttonz {
+  color: black;
   font-size: 17px;
   margin-top: 11px;
   margin-right: 10px;
@@ -44,6 +45,7 @@
 }
 
 .editAccountButton {
+  color: black;
   display: flex;
   justify-content: flex-end;
   margin-left: 20px;

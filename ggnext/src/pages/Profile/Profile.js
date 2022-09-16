@@ -80,7 +80,7 @@ const Profile = ({
         </div>
       </section>
       <div id="userFavorite">
-        <h1>Test</h1>
+        <h1></h1>
         <div className="favoriteCard">
           {userFavorite?.map((userFavorite, index) => (
             <div>
@@ -89,7 +89,7 @@ const Profile = ({
                 userFavorite={userFavorite}
                 handleFavoriteSelect={() => handleFavoriteSelect(userFavorite)}
               />
-              <h1>Test2</h1>
+              <h1></h1>
             </div>
           ))}
         </div>

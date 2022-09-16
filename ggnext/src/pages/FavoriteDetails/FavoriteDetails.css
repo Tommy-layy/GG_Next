@@ -27,3 +27,17 @@
 .favoriteName {
   background-color: white;
 }
+
+.buttonZ:hover {
+  text-decoration: none;
+  background-color: rgb(95, 95, 95);
+}
+
+.buttonZ {
+  color: black;
+  font-size: 17px;
+  margin-top: 11px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
