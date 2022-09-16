@@ -52,10 +52,10 @@ A website app where users are able to browse for games that are free to play. Us
 ### **_Future Updates_**
 
 - [ ] Get API to render games onto the page
-- [ ] Allow users to be able to change/update their account information
 - [ ] Allow users to be able to add games to a list
 - [ ] Adjust Nav Bar
 - [ ] Fix lightened texts on sign in/register form
+- [ ] Adjust sizing/Make mobile friendly
 
 ---
 
